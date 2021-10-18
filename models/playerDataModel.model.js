@@ -6,6 +6,8 @@ const playerSchema = mongoose.Schema({
   price: { type: String },
   isPlaying: { type: Boolean },
   description: { type: String },
+  sessionId: { type: Number },
+  playerImage: { type: String },
 });
 
 const playerModel = mongoose.model("cricketPlayerData", playerSchema);

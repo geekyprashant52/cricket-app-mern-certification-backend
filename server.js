@@ -19,8 +19,11 @@ mongoConnection.once("open", () => {
   console.log("MongoDB Connected");
 });
 
-const playerDataModel = require("./routers/playerDataRouter");
-app.use("/playerdata", playerDataModel);
+const playerDataRouter = require("./routers/playerDataRouter");
+app.use("/playerdata", playerDataRouter);
+
+const teamDataRouter = require("./routers/teamDataRouter");
+app.use("/teamdata", teamDataRouter);
 
 app.get("/", (req, res) => {
   res.send("Welcome to homepage");
